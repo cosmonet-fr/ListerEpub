@@ -8,20 +8,9 @@
     <title>Livres</title>
 </head>
 <body>
-    <section>
-        <h1>Liste des livres</h1>
-        <ul>
-            <?php
-            $scandir = scandir("./library");
-            foreach($scandir as $fichier){
-                if(preg_match("#\.(epub)$#",strtolower($fichier))){
-                    echo "<li><a href=\"library/$fichier\">$fichier</a></li>";
-                }
-            }
-            ?>
-        </ul>
-
-    </section>
+    <?php include("nav.html"); ?>
+    <?php include("page.php"); ?>
+    
     
 </body>
 </html>
